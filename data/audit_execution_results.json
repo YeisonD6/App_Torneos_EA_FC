@@ -1,0 +1,215 @@
+{
+  "total": 26,
+  "passed": 26,
+  "failed": 0,
+  "results": [
+    {
+      "id": "SCHEMA-leagues",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla leagues existe y es accesible",
+      "passed": true,
+      "details": "Existe (5 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-clubs",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla clubs existe y es accesible",
+      "passed": true,
+      "details": "Existe (25 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-players",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla players existe y es accesible",
+      "passed": true,
+      "details": "Existe (39 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-tournaments",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla tournaments existe y es accesible",
+      "passed": true,
+      "details": "Existe (1 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-tournament_participants",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla tournament_participants existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-matchdays",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla matchdays existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-matches",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla matches existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-match_events",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla match_events existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-match_result_proposals",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla match_result_proposals existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-match_disputes",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla match_disputes existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-tactical_boards",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla tactical_boards existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-tactical_positions",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla tactical_positions existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-profiles",
+      "moduleName": "Esquema DB",
+      "caseName": "Tabla profiles existe y es accesible",
+      "passed": true,
+      "details": "Existe (0 registros)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "SCHEMA-standings_view",
+      "moduleName": "Esquema DB",
+      "caseName": "Vista standings_view existe",
+      "passed": true,
+      "details": "Vista operativa (0 filas pendientes de partidos)",
+      "severity": "BAJO"
+    },
+    {
+      "id": "RLS-001",
+      "moduleName": "Seguridad RLS",
+      "caseName": "Anónimo NO puede insertar clubes",
+      "passed": true,
+      "details": "Bloqueado por RLS: new row violates row-level security policy for table \"clubs\"",
+      "severity": "CRÍTICO"
+    },
+    {
+      "id": "RLS-002",
+      "moduleName": "Seguridad RLS",
+      "caseName": "Anónimo NO puede borrar ligas",
+      "passed": true,
+      "details": "Protegido: 0 filas eliminadas (RLS deny)",
+      "severity": "CRÍTICO"
+    },
+    {
+      "id": "RLS-003",
+      "moduleName": "Seguridad RLS",
+      "caseName": "Anónimo NO puede inyectar partidos",
+      "passed": true,
+      "details": "Bloqueado por RLS: new row violates row-level security policy for table \"matches\"",
+      "severity": "CRÍTICO"
+    },
+    {
+      "id": "RLS-004",
+      "moduleName": "Seguridad RLS",
+      "caseName": "Anónimo NO puede escalar a admin",
+      "passed": true,
+      "details": "Protegido: 0 perfiles modificados",
+      "severity": "CRÍTICO"
+    },
+    {
+      "id": "RLS-005",
+      "moduleName": "Seguridad RPC",
+      "caseName": "Anónimo NO puede activar jornadas",
+      "passed": true,
+      "details": "Rechazado: Solo administradores pueden activar jornadas",
+      "severity": "ALTO"
+    },
+    {
+      "id": "RLS-006",
+      "moduleName": "Seguridad RPC",
+      "caseName": "Anónimo NO puede resolver disputas",
+      "passed": true,
+      "details": "Rechazado: Solo administradores pueden resolver disputas",
+      "severity": "ALTO"
+    },
+    {
+      "id": "RPC-001",
+      "moduleName": "Ruleta Atómica",
+      "caseName": "RPC rechaza llamadas no autenticadas",
+      "passed": true,
+      "details": "Rechazado correctamente: Usuario no autenticado",
+      "severity": "ALTO"
+    },
+    {
+      "id": "SEED-001",
+      "moduleName": "Seeding",
+      "caseName": "5 Ligas Oficiales presentes",
+      "passed": true,
+      "details": "5 ligas encontradas",
+      "severity": "ALTO"
+    },
+    {
+      "id": "SEED-002",
+      "moduleName": "Seeding",
+      "caseName": "25 Clubes Oficiales presentes",
+      "passed": true,
+      "details": "25 clubes encontrados",
+      "severity": "ALTO"
+    },
+    {
+      "id": "SEED-003",
+      "moduleName": "Integridad",
+      "caseName": "Clubes referencian ligas válidas",
+      "passed": true,
+      "details": "25/25 con FK íntegra",
+      "severity": "ALTO"
+    },
+    {
+      "id": "MATH-001",
+      "moduleName": "Torneo Berger",
+      "caseName": "Fórmula Ida y Vuelta N*(N-1)",
+      "passed": true,
+      "details": "Matemática verificada para N=4,6,8,10,12",
+      "severity": "MEDIO"
+    },
+    {
+      "id": "MATH-002",
+      "moduleName": "Tabla Posiciones",
+      "caseName": "Cálculo de Puntos, DG y PJ=PG+PE+PP",
+      "passed": true,
+      "details": "PTS: 4, GD: -1, PJ: 3",
+      "severity": "CRÍTICO"
+    }
+  ]
+}

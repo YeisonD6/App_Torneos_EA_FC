@@ -3,7 +3,7 @@
     "name": "App_Torneos_EA_FC",
     "slug": "App_Torneos_EA_FC",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "apptorneoseafc",
     "userInterfaceStyle": "automatic",

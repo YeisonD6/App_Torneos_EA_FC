@@ -1,65 +1,71 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import '@/global.css';
-
-import { Platform } from 'react-native';
-
 export const Colors = {
-  light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
-  },
-  dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
-  },
-} as const;
+  // Canvas & Surfaces (Stitch Apex Esports Dark)
+  background: '#080B10',
+  surface: '#101319',
+  surfaceLow: '#191C21',
+  surfaceContainer: '#1D2025',
+  surfaceHigh: '#272A30',
+  surfaceHighest: '#32353B',
+  surfaceBright: '#36393F',
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+  // Outlines & Borders
+  border: '#27303D',
+  borderLight: '#344052',
+  borderVariant: '#424934',
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
-  },
-});
+  // Competitive Accents
+  primary: '#B8FF2C', // Competition Lime
+  primaryPressed: '#9FE51D',
+  primaryDim: '#99DA00',
+  primaryContainer: '#B1F722',
+  onPrimary: '#131F00',
 
-export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
-} as const;
+  secondary: '#22D3EE', // Broadcast Cyan
+  secondaryBright: '#5DE6FF',
+  secondaryContainer: '#00CBE6',
+  onSecondary: '#00363E',
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
-export const MaxContentWidth = 800;
+  // Status & Feedback
+  success: '#39D98A',
+  warning: '#FFC928',
+  danger: '#FF4655', // Red Card / Disqualification
+  errorContainer: '#93000A',
+  info: '#38BDF8',
+
+  // Typography
+  textPrimary: '#F8FAFC',
+  textSecondary: '#A0A9B8',
+  textMuted: '#697386',
+  onSurfaceVariant: '#C2CAAE',
+};
+
+export const Shadows = {
+  limeGlow: {
+    shadowColor: '#B8FF2C',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.35,
+    shadowRadius: 10,
+    elevation: 6,
+  },
+  cyanGlow: {
+    shadowColor: '#22D3EE',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.4,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  card: {
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  modal: {
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 10,
+  },
+};
